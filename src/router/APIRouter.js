@@ -1,7 +1,8 @@
-const APIRouter = require('express').Router();
-const { v1Router, v2Router } = require('../controllers');
+const v1Router = require('express').Router();
+const v2Router = require('express').Router();
+const router = require('../controllers');
 
-APIRouter.use('/api/v1', v1Router);
-APIRouter.use('/api/v2', v2Router);
+v1Router.use('/api/v1', router);
+v2Router.use('/api/v2', router);
 
-module.exports = APIRouter;
+module.exports = { v1Router, v2Router };

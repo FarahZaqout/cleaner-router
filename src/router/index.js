@@ -1,3 +1,1 @@
-const APIRouter = require('./APIRouter');
-
-module.exports = APIRouter;
+module.exports = require('./APIRouter');
